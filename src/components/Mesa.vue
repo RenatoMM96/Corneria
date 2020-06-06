@@ -9,7 +9,7 @@
    @keydown.tab.space.enter="prenche_produto">
  </input>
   <input type="search" v-model="produto" placeholder="Nome do Produto" value='produto'></input>
-  <!-- <input type="number" v-model="qtde" placeholder="Quantidade" value={{qtde}}></input> -->
+  <!-- <input type="number" v-model="qtde" placeholder="Quantidade" value={{qtde}}></input>  teste -->
   <br>
   <!-- coloquei array dentro de outro array -->
   <div v-for="propriedade in preenchimento">
