@@ -1,0 +1,3 @@
+calcular(){
+  alert("fui executada")
+}

@@ -19,12 +19,13 @@
   </label>
   </div>
   <br>
-  <input type="number" v-model="qtde"placeholder="Qtde">
-  <input type="text" v-model="obs"placeholder="Observação">
-  <button type="button" class="botao" @click="salvar_prato">Adicionar</button>
+  <input type="number" v-model = "qtde" placeholder="Qtde">
+  <input type="text" v-model = "obs" placeholder="Observação">
+  <button type="button" class = "botao" @click="salvar_prato">Adicionar</button>
   <!-- <button type="button" class="botao" @click="listar_produtos">ver</button> -->
 </form>
 </div>
+<div class="tabela">
 <table>
   <tr>
     <th>Cod</th>
@@ -41,6 +42,7 @@
 <td>R$ {{carrinho.valor}}</td>
 </tr>
   </table>
+  </div>
 <h3 class="total">Total: R$ {{total}}</h3>
 </div>
 
@@ -48,6 +50,21 @@
   <button type="button" class="botao">Imprimir</button>
   <button type="button" class="botao" @click="finalizar">Finalizar</button>
 
+<p>onseguir o primeiro milhão é o principal objetivo da grande maioria dos investidores.
+   Você pode confirmar o que eu digo apenas fazendo uma rápida pesquisa na internet, pois
+   verá uma enorme quantidade de artigos indicando maneiras de se atingir essa meta.
+
+Ter 1 milhão de reais no bolso é muito bom,
+ pois abre um leque de possibilidades de coisas que as pessoas buscam ao longo da vida.
+ Com esse dinheiro é possível, por exemplo, viajar o mundo, realizar o sonho da casa própria, trocar o carro por outro melhor, pagar a faculdade dos filhos etc.
+
+No entanto, 1 milhão de reais também pode ser utilizado
+para fazer mais dinheiro e aumentar ainda mais o seu patrimônio se
+ aplicado corretamente.
+ Em alguns casos, inclusive, já é possível começar a pensar em viver de renda com esse dinheiro.
+
+É por isso que, neste artigo, você encontrará algumas dicas sobre onde investir 1 milhão
+ de reais e a opinião de especialistas sobre a diversificação de uma carteira de investimentos. Boa leitura!</p>
 
   </div>
 </template>
@@ -177,6 +194,13 @@ h3{
   margin-bottom: 1px;
 
 }
+.tabela{
+  max-height: 400px;
+  overflow-y: auto;
+}
+.tabela::-webkit-scrollbar{
+  display: none;
+}
 .input1{
 
   border:none;
@@ -206,6 +230,12 @@ tr:nth-child(even) {
 .botao{
   margin-top: 6px;
  padding: 10px 24px;
+}
+p{
+    max-height:100px;
+    overflow: auto;
+    max-width: 200px;
+
 }
 
 </style>

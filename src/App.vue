@@ -29,6 +29,10 @@ export default {
 .botao:hover {
   box-shadow: 0 8px 16px 0 #000000;
 }
+.erro{
+  color: red;
+  text-align: center;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   color: #2c3e50;

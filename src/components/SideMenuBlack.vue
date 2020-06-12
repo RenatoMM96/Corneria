@@ -4,19 +4,23 @@
         <span slot="toggle-icon"class= "material-icons">more_horiz</span>
         <span slot="dropdown-icon" class= "material-icons">keyboard_arrow_down</span>
     </sidebar-menu>
+    <span>{{nome}}</span>
   </div>
 
 </template>
 
 <script>
+import firebase from 'firebase'
+import db from '@/firebase/init'
     export default {
       name:'SideMenuBlack',
         data() {
             return {
+              nome:'renato',
                 menu: [
                     {
                         header: true,
-                        title: 'Main Navigation',
+                        title: 'renato',
                         hiddenOnCollapse: true
                     },
 // home
@@ -61,7 +65,7 @@
                       },
 // relatorio
                     {
-                        href: '/charts',
+                        href: '/relatorio',
                         title: 'Relatorios',
                         icon: {
                           element: 'span',
@@ -70,16 +74,47 @@
                         },
                         child: [
                             {
-                                href: '/charts/sublink',
-                                title: 'Sub Link'
+                                href: '/relatorio/estoque',
+                                title: 'Estoque'
                             }
                         ]
+                    },
+          // configurações
+                    {
+                            href: '/configuracoes',
+                            title: 'Configurações',
+                            icon: {
+                            element: 'span',
+                            class: 'material-icons',
+                            text: 'build'
+                          },
+                          child: [
+                              {
+                                  href: '/configuracoes/usuarios',
+                                  title: 'Usuários'
+                              }
+                          ]
+                    },
+                    {
+                        footer: true,
+                        onclick:'sairfuncao',
+                        title: 'Sair',
+                        hiddenOnCollapse: true
                     },
 
                 ]
 
             }
-        }
+          },
+
+          methods:{
+            sairfuncao(){
+              alert("funçao executada")
+              firebase.auth().signOut().then(()=> {
+                this.$router.push({name:'Logar'})
+              })
+            }
+          }
 
   }
 </script>

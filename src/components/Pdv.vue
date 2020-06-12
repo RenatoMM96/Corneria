@@ -7,50 +7,41 @@
       </div>
       <ul>
         <li >
-          <button class="botao" type="button" name="button">
+          <button class="botao" type="button" name="button" @click="adicionar">
             <span class="material-icons md-40-light">add</span>
             <span>Adicionar</span>
             </button>
         </li>
         <li >
-          <button class="botao" type="button" name="button">
+          <button class="botao" type="button" name="button" @click="trocar">
             <span class="material-icons md-40-light">sync_alt</span>
             <span>Trocar</span>
             </button>
         </li>
         <li >
-          <button class="botao" type="button" name="button">
+          <button class="botao" type="button" name="button"  @click="juntar">
             <span class="material-icons md-40-light">merge_type</span>
             <span>Juntar</span>
             </button>
         </li>
-
         <li >
-
-          <button class="botao" type="button" name="button">
+          <button class="botao" type="button" name="button"  @click="excluir">
             <span class="material-icons md-40-light">clear</span>
             <span>Excluir</span>
             </button>
-
         </li>
       </ul>
 </div>
- <div class="container">
+ <div  v-if="simples" class="container">
         <input type="text" class="input1" v-model="t1" placeholder="Coloque um número para a mesa">
         <button name="button" @click="adicionar_identificador2(t1)"class="material-icons botao">navigate_next </button>
     </div>
-      <!-- <div class="container">
+       <div v-if="!simples" class="container">
         <input type="text" class="input1" v-model="t1" placeholder="Coloque a primeira mesa">
-        <h4>Juntar com :</h4>
+        <h4>{{operacao}} com :</h4>
           <input type="text" class="input1" v-model="t2" placeholder="Coloque a segunda mesa ">
         <button name="button" @click="juntar_identificador(t1,t2)"class="material-icons botao">navigate_next </button>
-
-       -->
-
-
-
-
-
+      </div>
 
     <h1>Abertas</h1>
     <ul  v-for="(atributo,index) in mesa">
@@ -77,16 +68,35 @@ export default {
   name:'Pdv',
   data()
   {
-
-
 return{
   t1:null,
   t2:null,
   mesa:[],
   t3:'1',
+  simples:null,
+  operacao:null,
 }
 },
 methods:{
+
+adicionar(){
+  this.simples = true,
+  this.operacao = 'adicionar'
+},
+excluir(){
+  this.simples = true,
+  this.operacao = 'excluir'
+},
+trocar(){
+  this.simples = false,
+  this.operacao = 'trocar'
+},
+juntar(){
+  this.simples = false,
+  this.operacao = 'juntar'
+},
+
+
   //Criando metado adicionar_identificador
 
   adicionar_identificador(t){
@@ -130,8 +140,6 @@ excluir_identificador2(t1){
 //---------------------------- aperfeiçoar, para não ter q fazer reload-----------------------------------------
     let excluir = db.collection('mesa').doc(this.t1).delete().then(()=>{
       location.reload();
-
-
     // this.mesa = this.mesa.filter(curso=>{
     // return curso.id != id
   }).catch(err=>
@@ -152,8 +160,6 @@ created(){
 
   })
 }
-
-
 }
 
 </script>
@@ -167,10 +173,6 @@ created(){
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-
-
-
-
 }
 
 /* On mouse-over, add a deeper shadow */
