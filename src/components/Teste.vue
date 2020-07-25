@@ -6,11 +6,16 @@
     </li>
   <h1 v-model:"x">Total somatorio de idade :{{x}} </h1>
     <button type="button" @click="mudar_idade(x)">Vitoria idade</button>
+    <button type="button" @click="calcular()">Favor manda alerta</button>
+
     <button type="button" name="button"></button>
     <h1>{{y}}</h1>
     <div class="container">
       <input type="number" name="" v-model="ss">
-      <button type="button" name="button" @click="calcular()">calcular</button>
+      <button type="button" name="button" @click="first.calcular()">calcular</button>
+      <button type="button" name="button" @click="funcao1()">1</button>
+      <button type="button" name="button" @click="funcao2()">2</button>
+
 
     </div>
 
@@ -20,7 +25,7 @@
 </template>
 <script src="./first.js"></script>
 <script>
-
+import first from './first'
 import firebase from 'firebase'
 import db from '@/firebase/init'
 export default {
@@ -63,6 +68,21 @@ array:[
 
   },
   methods:{
+    funcao1(){
+      var res;
+      var numb1 = 1;
+      var numb2 = 1;
+      res = numb1-numb2;
+      alert('função 1 funcionando');
+      alert(res)
+      return res;
+    },
+    funcao2(){
+      this.funcao1();
+      alert(funcao.res)
+
+      alert('função 2 funcionando');
+    },
 
 
         calcular2(ss){

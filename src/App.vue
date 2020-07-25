@@ -29,6 +29,22 @@ export default {
 .botao:hover {
   box-shadow: 0 8px 16px 0 #000000;
 }
+.botao_bola {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #009688;
+  align-items: center;
+
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.botao_bola:hover {
+  box-shadow: 0 8px 16px 0 #000000;
+}
 .erro{
   color: red;
   text-align: center;

@@ -1,13 +1,18 @@
 // Instalados globalmente
 npm i vue-sidebar-menu --save -> SidebarMenu
 npm install material-design-icons -> icons do google
+https://www.npmjs.com/package/vue-google-charts
 
+https://www.npmjs.com/package/vue-google-charts
 Documentação de terceiros
 // VueSidebarMenu
 https://github.com/yaminncco/vue-sidebar-menu
 
 
 Falta fazer
+- registrar baixa do produto ao ser feito o pedido.
+- reduzir o estoque no relatorio de Estoque
+- fazer entrada de mercadoria
 Aba cadastro
 Aba Comercial
 aba Financeiro

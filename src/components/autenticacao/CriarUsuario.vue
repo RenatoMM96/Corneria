@@ -17,7 +17,7 @@
       <input type="email"  v-model="email" placeholder="Email....">
       <input type="password"  v-model="password"placeholder="Senha....">
       <p v-if="feedback"class="erro">{{feedback}}</p>
-      <button type="button" name="button" @click="signup">Logar</button>
+      <button type="button" name="button" @click="signup">Criar Usuario</button>
     </div>
     </div>
   </div>
@@ -47,19 +47,18 @@ methods:{
       // sugyfy
       firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
       .then(cred=>{
-        db.collection('users').doc().set({
-          geolocation:null,
-          perfil:this.perfil,
+        db.collection('users').doc(cred.user.uid).set({
           nome:this.nome,
-          user_id:cred.user.uid,
-          senha:this.password,
           email:this.email,
+          senha:this.password,
+          perfil:this.perfil,
+          user_id:cred.user.uid,
         })
 
       }).then(()=>{
         this.$router.push({name:'Pdv'})
       })  .catch(err=>{
-        console.console.log(err)
+        console.log(err)
         this.feedback = err.message;
       })
 

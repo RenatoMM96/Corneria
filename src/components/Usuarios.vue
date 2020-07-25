@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="container">
     <h1>Usuario:{{nome}}</h1>
+    <h3>Email:{{email}}</h3>
     <router-link :to="{ name: 'CriarUsuario', params: {} }">
     Criar novo Usuário
     </router-link>
@@ -16,19 +17,27 @@ import firebase from 'firebase'
     data(){
 
       return{
+        email:null,
         nome:null,
 
       }
     },
       mounted(){
-      this.nome = firebase.auth().currentUser.email
+        db.collection('users').doc(firebase.auth().currentUser.uid).get().then(doc => {
+          if(doc.exists){
+            let nome = doc.data();
+            this.nome = nome.nome;
+          } else {
+            console.log('algo estranho aconteceu')
+          }
+        })
+      this.email = firebase.auth().currentUser.email
 
     },
     methods:{
       sairfuncao(){
-        alert("funçao executada")
         firebase.auth().signOut().then(()=> {
-          this.$router.push({name:'Logar'})
+        this.$router.push({name:'Logar'})
         })
       }
     }

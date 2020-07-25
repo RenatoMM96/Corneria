@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="component-wrapper">
+  <div class="teste">
     <div class="card" v-for="card in cards">
       <h1> {{card.titulo}}</h1>
       <h6>Codigo: {{card.cod}}</h6>
@@ -10,6 +10,10 @@
       <h5>Descrição:</h5>
       <p>{{card.descricao}}</p>
       <h5>Valor: {{card.valor}}</h5>
+      <div class="botao_bola" @click="navegar_ficha_tecnica(card.cod)">
+
+        <span class="material-icons">create</span>
+      </div>
     </div>
   </div>
 </template>
@@ -36,26 +40,35 @@ import db from '@/firebase/init'
         })
       })
     },
+    methods:{
+    navegar_ficha_tecnica(cod){
+        this.$router.push({ name: 'Cadastro_ficha_tecnica', params:{cod:cod}})
+    }
+    }
 }
 </script>
 
 <style scoped>
+/* esta alinhando com o ultimo elemento no caso o h5 */
 .card{
+  display: inline-block;
+  margin-top: 5%;
   margin-left: 50px;
-  width: 500px;
-  height: 400px;
+  width: 350px;
+  height: 400;
   border: 0px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
+
 }
 .chip {
   display: inline-block;
-  padding: 0 15px;
+  padding: 0 5px;
   margin: 5px;
-  height: 40px;
-  font-size: 16px;
-  line-height: 40px;
-  border-radius: 25px;
+  height: 35px;
+  font-size: 14px;
+  line-height: 35px;
+  border-radius: 20px;
   background-color: #C5CAE9;
 }
 </style>

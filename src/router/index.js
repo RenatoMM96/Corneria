@@ -10,6 +10,13 @@ import CriarUsuario from '@/components/autenticacao/CriarUsuario'
 import Logar from '@/components/autenticacao/Logar'
 import Usuarios from '@/components/Usuarios'
 import firebase from 'firebase'
+import Cobrinha from '@/components/Cobrinha'
+import Caixa from '@/components/Caixa'
+import Estoque from '@/components/Estoque'
+import Cadastro_produto from '@/components/Cadastro_produto'
+import Cadastro_ficha_tecnica from '@/components/Cadastro_ficha_tecnica'
+
+
 
 Vue.use(Router)
 
@@ -70,7 +77,36 @@ const router = new Router({
       component: Usuarios,
       meta:{requiresAuth:true},
     },
-
+    {
+      path: '/caixa',
+      name: 'Caixa',
+      component: Caixa,
+      meta:{requiresAuth:true},
+    },
+    {
+      path: '/relatorio/estoque',
+      name: 'Estoque',
+      component: Estoque,
+      meta:{requiresAuth:true},
+    },
+    {
+      path: '/cobrinha',
+      name: 'Cobrinha',
+      component: Cobrinha,
+    },
+    {
+      path: '/cadastro/cadastro_produto',
+      name: 'Cadastro_produto',
+      component: Cadastro_produto,
+      meta:{requiresAuth:true},
+    },
+    {
+      path: '/cadastro/Cadastro_ficha_tecnica',
+      name: 'Cadastro_ficha_tecnica',
+      component: Cadastro_ficha_tecnica,
+      props: true,
+      meta:{requiresAuth:true},
+    },
   ]
 })
 

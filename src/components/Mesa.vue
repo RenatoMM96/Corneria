@@ -50,22 +50,6 @@
   <button type="button" class="botao">Imprimir</button>
   <button type="button" class="botao" @click="finalizar">Finalizar</button>
 
-<p>onseguir o primeiro milhão é o principal objetivo da grande maioria dos investidores.
-   Você pode confirmar o que eu digo apenas fazendo uma rápida pesquisa na internet, pois
-   verá uma enorme quantidade de artigos indicando maneiras de se atingir essa meta.
-
-Ter 1 milhão de reais no bolso é muito bom,
- pois abre um leque de possibilidades de coisas que as pessoas buscam ao longo da vida.
- Com esse dinheiro é possível, por exemplo, viajar o mundo, realizar o sonho da casa própria, trocar o carro por outro melhor, pagar a faculdade dos filhos etc.
-
-No entanto, 1 milhão de reais também pode ser utilizado
-para fazer mais dinheiro e aumentar ainda mais o seu patrimônio se
- aplicado corretamente.
- Em alguns casos, inclusive, já é possível começar a pensar em viver de renda com esse dinheiro.
-
-É por isso que, neste artigo, você encontrará algumas dicas sobre onde investir 1 milhão
- de reais e a opinião de especialistas sobre a diversificação de uma carteira de investimentos. Boa leitura!</p>
-
   </div>
 </template>
 
@@ -139,7 +123,6 @@ import db from '@/firebase/init'
          obs:this.obs ,
          valor:this.valor*this.qtde,
        })
-       alert('prato salvo com sucesso')
        created();
 },
 

@@ -4,7 +4,6 @@
         <span slot="toggle-icon"class= "material-icons">more_horiz</span>
         <span slot="dropdown-icon" class= "material-icons">keyboard_arrow_down</span>
     </sidebar-menu>
-    <span>{{nome}}</span>
   </div>
 
 </template>
@@ -16,13 +15,7 @@ import db from '@/firebase/init'
       name:'SideMenuBlack',
         data() {
             return {
-              nome:'renato',
                 menu: [
-                    {
-                        header: true,
-                        title: 'renato',
-                        hiddenOnCollapse: true
-                    },
 // home
                     {
                         href: '/',
@@ -43,6 +36,15 @@ import db from '@/firebase/init'
                           text: 'storefront'
                         }
                       },
+                      {
+                          href: '/caixa',
+                          title: 'Caixa',
+                          icon: {
+                            element: 'span',
+                            class: 'material-icons',
+                            text: 'payments'
+                          }
+                        },
   // cadatro
                       {
                           href: '/cadastro',
@@ -54,8 +56,12 @@ import db from '@/firebase/init'
                           },
                           child: [
                               {
-                                  href: '/cadastro/produto',
+                                  href: '/cadastro/cadastro_produto',
                                   title: 'Cadastro Produto'
+                              },
+                              {
+                                  href: '/cadastro/Cadastro_ficha_tecnica',
+                                  title: 'Cadastro Ficha Tecnica'
                               },
                               {
                                   href: '/cadastro/cardapio',
@@ -101,6 +107,7 @@ import db from '@/firebase/init'
                         title: 'Sair',
                         hiddenOnCollapse: true
                     },
+
 
                 ]
 
