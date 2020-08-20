@@ -10,9 +10,14 @@
       <h5>Descrição:</h5>
       <p>{{card.descricao}}</p>
       <h5>Valor: {{card.valor}}</h5>
-      <div class="botao_bola" @click="navegar_ficha_tecnica(card.cod)">
+      <div class="footer_card">
 
+        <div class="botao_bola" @click="deletar(card.cod)" id="botao_bola1" >
+          <span class="material-icons">delete</span>
+        </div>
+        <div class="botao_bola" @click="navegar_ficha_tecnica(card.cod)" id="botao_bola2" >
         <span class="material-icons">create</span>
+        </div>
       </div>
     </div>
   </div>
@@ -43,13 +48,22 @@ import db from '@/firebase/init'
     methods:{
     navegar_ficha_tecnica(cod){
         this.$router.push({ name: 'Cadastro_ficha_tecnica', params:{cod:cod}})
+    },
+    deletar(cod){
+      alert(cod)
+      db.collection('cardapio').doc(cod).delete();
+
     }
     }
 }
 </script>
 
 <style scoped>
-/* esta alinhando com o ultimo elemento no caso o h5 */
+
+.footer_card{
+  position:inherit;
+  width: 100%;
+}
 .card{
   display: inline-block;
   margin-top: 5%;
@@ -61,10 +75,22 @@ import db from '@/firebase/init'
   text-align: center;
 
 }
+#botao_bola1{
+  margin-bottom: -50px;
+  margin-left: 5%;
+  margin-right:auto;
+}
+#botao_bola2{
+  margin-bottom: -25px;
+  margin-left: auto;
+  margin-right:5%;
+}
 .chip {
+
   display: inline-block;
   padding: 0 5px;
-  margin: 5px;
+  margin: 2%;
+  margin-right: auto;
   height: 35px;
   font-size: 14px;
   line-height: 35px;

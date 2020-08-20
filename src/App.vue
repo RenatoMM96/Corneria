@@ -29,12 +29,31 @@ export default {
 .botao:hover {
   box-shadow: 0 8px 16px 0 #000000;
 }
+.botao_verde{
+  background-color:  #009688;
+  border: 0px;
+  border-radius: 7px;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  z-index: 1;
+
+  outline: none;
+}
+.botao:hover {
+  box-shadow: 0 8px 16px 0 #000000;
+}
 .botao_bola {
   height: 50px;
   width: 50px;
   border-radius: 50%;
   background-color: #009688;
-  align-items: center;
+  z-index: 1;
+  /* Alinhando itens no centro */
+  line-height: 60px;
+  vertical-align: center;
+  text-align: center;
+  /* fim do alinhamento */
 
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

@@ -15,7 +15,7 @@
 </div>
 <label>Forma:</label>
 <select>
-  <option v-for="(metados,index) in ingredientes" :key="index+1">{{metados}}</option>
+  <option v-for="(metados,index) in ingredientes" :key="index + 1">{{metados}}</option>
 </select>
 <br>
 <label>Observação</label>
