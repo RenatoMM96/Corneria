@@ -53,7 +53,7 @@
         <table class="table">
       <thead class="table">
         <tr>
-          <th >Ordem</th>
+          <th>Ordem</th>
           <th>Sub-Grupo</th>
           <th>Item</th>
           <th>Un</th>
@@ -204,7 +204,7 @@ import db from '@/firebase/init'
   margin-left: 50px;
   width: 90%;
   height: 70px;
- text-align:center;
+  text-align:center;
 }
 #ajuste1{
   margin-left: auto;
