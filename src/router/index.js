@@ -13,7 +13,7 @@ import firebase from 'firebase'
 import Cobrinha from '@/components/Cobrinha'
 import Caixa from '@/components/Caixa'
 import Estoque from '@/components/Estoque'
-import Cadastro_produto from '@/components/Cadastro_produto'
+import Geral from '@/components/Cadastro/Cadastro_produto/Geral'
 import Cadastro_ficha_tecnica from '@/components/Cadastro_ficha_tecnica'
 
 
@@ -96,8 +96,8 @@ const router = new Router({
     },
     {
       path: '/cadastro/cadastro_produto',
-      name: 'Cadastro_produto',
-      component: Cadastro_produto,
+      name: 'Geral',
+      component: Geral,
       meta:{requiresAuth:true},
     },
     {
