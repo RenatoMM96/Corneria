@@ -4,16 +4,7 @@
       <!-- geral -->
 
         <h2>Cadastro de Produto</h2>
-
-        <div class="tab">
-          <a href="javascript:void(0)" onclick="">Geral</a>
-          <a href="javascript:void(0)" onclick="">Tributação</a>
-          <a href="javascript:void(0)" onclick="">Classificação</a>
-          <a href="javascript:void(0)" onclick="">Fornecedores</a>
-        </div>
-
-
-
+        <Tabs></Tabs>
       <label for="">Descrição</label>
       <input type="text" class="descricao" v-model="nome">
       <br>
@@ -42,14 +33,17 @@
 
 <script>
 import db from '@/firebase/init'
+import Tabs from "@/components/Cadastro/Cadastro_produto/Tabs"
   export default {
     name:'Geral',
+    components:{
+      Tabs,
+    },
     data(){
       return{
         sku:null,
         nome:null,
         unidade_padrao:null,
-
         options:["Ativo","Inativo"],
       }
     },

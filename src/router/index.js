@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import SideMenuBlack from '@/components/SideMenuBlack'
 import Pdv from '@/components/Pdv'
 import Cardapio from '@/components/Cardapio'
 import Mesa from '@/components/Mesa'
@@ -14,6 +13,9 @@ import Cobrinha from '@/components/Cobrinha'
 import Caixa from '@/components/Caixa'
 import Estoque from '@/components/Estoque'
 import Geral from '@/components/Cadastro/Cadastro_produto/Geral'
+import Tributacao from '@/components/Cadastro/Cadastro_produto/Tributacao'
+import Classificacao from '@/components/Cadastro/Cadastro_produto/Classificacao'
+import Tabs from '@/components/Cadastro/Cadastro_produto/Tabs'
 import Cadastro_ficha_tecnica from '@/components/Cadastro_ficha_tecnica'
 
 
@@ -24,8 +26,8 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'SideMenuBlack',
-      component: SideMenuBlack,
+      name: 'Pdv',
+      component: Pdv,
       meta:{requiresAuth:true},
 
     },
@@ -101,12 +103,25 @@ const router = new Router({
       meta:{requiresAuth:true},
     },
     {
+      path: '/cadastro/cadastro_produto/Tributacao',
+      name: 'Tributacao',
+      component: Tributacao,
+      meta:{requiresAuth:true},
+    },
+    {
+      path: '/cadastro/cadastro_produto/Classificacao',
+      name: 'Classificacao',
+      component: Classificacao,
+      meta:{requiresAuth:true},
+    },
+    {
       path: '/cadastro/Cadastro_ficha_tecnica',
       name: 'Cadastro_ficha_tecnica',
       component: Cadastro_ficha_tecnica,
       props: true,
       meta:{requiresAuth:true},
     },
+
   ]
 })
 

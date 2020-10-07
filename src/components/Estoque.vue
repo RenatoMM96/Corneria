@@ -8,7 +8,7 @@
 />
 <div class="dados" v-for="dado in batata" :key='dado.id'>
 
-  <h4>Dados Para calculos</h4>
+  <!-- <h4>Dados Para calculos</h4>
   <h5>Item Batata</h5>
   <h5>Estoque Atual = {{estoque}}</h5>
   <h5>Consumo = {{dado.Consumo}}</h5>
@@ -16,19 +16,19 @@
   <h5>Quantidade comprada Q = {{q}}</h5>
   <h5>Custo C  = {{c}}</h5>
   <h5>Tempo de reposição TR = {{tr}}</h5>
-  <h5>Consumo = {{consumo}}</h5>
+  <h5>Consumo = {{consumo}}</h5> -->
 </div>
 
-<div class="dados">
-  <h4>Dados Calculados</h4>
-  <h5>Item Batata</h5>
-  <h5> Estoque Mínimo = {{estoque_minimo}}</h5>
-  <h5> Estoque Médio = {{estoque_medio}}</h5>
-  <h5> Ponto de resuprimento = {{ponto_resuprimento}}</h5>
-  <h5>Lote Econômico de Compra = {{lote_economico_compra}} </h5>
-  <h5>Estoque Máximo = {{estoque_maximo}} </h5>
+  <!-- <div class="dados">
+    <h4>Dados Calculados</h4>
+    <h5>Item Batata</h5>
+    <h5> Estoque Mínimo = {{estoque_minimo}}</h5>
+    <h5> Estoque Médio = {{estoque_medio}}</h5>
+    <h5> Ponto de resuprimento = {{ponto_resuprimento}}</h5>
+    <h5>Lote Econômico de Compra = {{lote_economico_compra}} </h5>
+    <h5>Estoque Máximo = {{estoque_maximo}} </h5>
 
-</div>
+  </div> -->
 
   </div>
 </template>
@@ -87,7 +87,7 @@ import db from '@/firebase/init'
         width: 600,
         height: 400,
         legend: { position: 'top', maxLines: 3 },
-        bar: { groupWidth: '75%' },
+        bar: { groupWidth: '15%' },
         isStacked: true,
         chart: {
           title: 'Estoques',

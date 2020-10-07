@@ -1,5 +1,7 @@
 <template lang="html">
   <div class="component-wrapper">
+    <Tabs></Tabs>
+
     <form class="" action="index.html" method="post">
       <label for="grupo">Grupo</label>
       <input type="text" name="grupo" v-model="grupo">
@@ -11,23 +13,23 @@
 
 
     </form>
-    <p>I'm a new vue component.</p>
   </div>
 </template>
 
 <script>
+import Tabs from '@/components/Cadastro/Cadastro_produto/Tabs'
   export default {
+    name:'Classificacao',
+    components:{
+      Tabs
+    },
     data(){
-
-    }
-    return{
-      marca:null,
-      grupo:null,
-      sub_grupo:null,
-    }
-    mounted() {
-      console.log('New component mounted.')
-    }
+      return{
+        marca:null,
+        grupo:null,
+        sub_grupo:null,
+      }
+    },
   }
 </script>
 
