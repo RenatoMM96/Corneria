@@ -94,7 +94,6 @@ import db from '@/firebase/init'
     type: String,
   }
 },
-
     data(){
     return{
       //cadastro prato
@@ -119,7 +118,6 @@ import db from '@/firebase/init'
       item_alternativo2:null,
       aparece_cliente:null,
       ordenamento:[],
-
     }
 
   },

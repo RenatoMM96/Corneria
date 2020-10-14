@@ -8,7 +8,7 @@
 />
 <div class="dados" v-for="dado in batata" :key='dado.id'>
 
-  <!-- <h4>Dados Para calculos</h4>
+  <h4>Dados Para calculos</h4>
   <h5>Item Batata</h5>
   <h5>Estoque Atual = {{estoque}}</h5>
   <h5>Consumo = {{dado.Consumo}}</h5>
@@ -16,10 +16,10 @@
   <h5>Quantidade comprada Q = {{q}}</h5>
   <h5>Custo C  = {{c}}</h5>
   <h5>Tempo de reposição TR = {{tr}}</h5>
-  <h5>Consumo = {{consumo}}</h5> -->
+  <h5>Consumo = {{consumo}}</h5>
 </div>
 
-  <!-- <div class="dados">
+  <div class="dados">
     <h4>Dados Calculados</h4>
     <h5>Item Batata</h5>
     <h5> Estoque Mínimo = {{estoque_minimo}}</h5>
@@ -28,7 +28,7 @@
     <h5>Lote Econômico de Compra = {{lote_economico_compra}} </h5>
     <h5>Estoque Máximo = {{estoque_maximo}} </h5>
 
-  </div> -->
+  </div>
 
   </div>
 </template>
@@ -169,7 +169,6 @@ for (var i = 0; i <= this.batata.length; i++) {
 }
 
 </script>
-
 <style lang="css">
 .dados{
   display: block;
@@ -177,5 +176,4 @@ for (var i = 0; i <= this.batata.length; i++) {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
 }
-
 </style>

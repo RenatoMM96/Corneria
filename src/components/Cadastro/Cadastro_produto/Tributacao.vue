@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="component-wrapper">
-    <Tabs/>
+    <Tabs v-bind:sel_tributacao="true"></Tabs>
     <form>
           <label for="">Ncm</label>
           <input type="text" name="" v-model="ncm">

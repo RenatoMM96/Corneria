@@ -2,9 +2,9 @@
   <div class="Geral">
     <form class="ajuste" action="index.html" method="post">
       <!-- geral -->
-
-        <h2>Cadastro de Produto</h2>
-        <Tabs></Tabs>
+      <!-- Chama a tab e passa como parametro uma variavel para poder definir qual tab está acionada
+     ideal seria poder alterar no array a tab que está selecionada -->
+        <Tabs v-bind:sel_geral="true"></Tabs>
       <label for="">Descrição</label>
       <input type="text" class="descricao" v-model="nome">
       <br>

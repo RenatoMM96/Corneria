@@ -122,15 +122,8 @@ function keyPush() {
 
     break;
     default:
-
   }
-
-
 }
-
-
-
-
  }
  }
 </script>
