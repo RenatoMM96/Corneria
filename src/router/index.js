@@ -17,6 +17,7 @@ import Tributacao from '@/components/Cadastro/Cadastro_produto/Tributacao'
 import Classificacao from '@/components/Cadastro/Cadastro_produto/Classificacao'
 import Tabs from '@/components/Cadastro/Cadastro_produto/Tabs'
 import Cadastro_ficha_tecnica from '@/components/Cadastro_ficha_tecnica'
+import SelectPlus from '@/components/Select_plus'
 
 
 
