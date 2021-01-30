@@ -7,10 +7,12 @@
 
 <script>
 import SideMenuBlack from "@/components/SideMenuBlack"
+import Tabs from "@/components/Cadastro/Cadastro_produto/Tabs"
 export default {
   name: 'App',
   components:{
     SideMenuBlack,
+    Tabs,
   }
 }
 </script>

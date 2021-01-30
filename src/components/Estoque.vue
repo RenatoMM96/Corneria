@@ -19,16 +19,16 @@
   <h5>Consumo = {{consumo}}</h5>
 </div>
 
-<div class="dados">
-  <h4>Dados Calculados</h4>
-  <h5>Item Batata</h5>
-  <h5> Estoque Mínimo = {{estoque_minimo}}</h5>
-  <h5> Estoque Médio = {{estoque_medio}}</h5>
-  <h5> Ponto de resuprimento = {{ponto_resuprimento}}</h5>
-  <h5>Lote Econômico de Compra = {{lote_economico_compra}} </h5>
-  <h5>Estoque Máximo = {{estoque_maximo}} </h5>
+  <div class="dados">
+    <h4>Dados Calculados</h4>
+    <h5>Item Batata</h5>
+    <h5> Estoque Mínimo = {{estoque_minimo}}</h5>
+    <h5> Estoque Médio = {{estoque_medio}}</h5>
+    <h5> Ponto de resuprimento = {{ponto_resuprimento}}</h5>
+    <h5>Lote Econômico de Compra = {{lote_economico_compra}} </h5>
+    <h5>Estoque Máximo = {{estoque_maximo}} </h5>
 
-</div>
+  </div>
 
   </div>
 </template>
@@ -87,7 +87,7 @@ import db from '@/firebase/init'
         width: 600,
         height: 400,
         legend: { position: 'top', maxLines: 3 },
-        bar: { groupWidth: '75%' },
+        bar: { groupWidth: '15%' },
         isStacked: true,
         chart: {
           title: 'Estoques',
@@ -169,7 +169,6 @@ for (var i = 0; i <= this.batata.length; i++) {
 }
 
 </script>
-
 <style lang="css">
 .dados{
   display: block;
@@ -177,5 +176,4 @@ for (var i = 0; i <= this.batata.length; i++) {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
 }
-
 </style>

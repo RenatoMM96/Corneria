@@ -122,21 +122,14 @@ function keyPush() {
 
     break;
     default:
-
   }
-
-
 }
-
-
-
-
  }
  }
 </script>
 
 <style lang="css">
-canvas{
+  canvas{
 }
 .component-wrapper{
   text-align: center;

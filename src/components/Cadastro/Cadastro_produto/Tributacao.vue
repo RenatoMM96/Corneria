@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="component-wrapper">
+    <Tabs v-bind:sel_tributacao="true"></Tabs>
     <form>
           <label for="">Ncm</label>
           <input type="text" name="" v-model="ncm">
@@ -14,19 +15,22 @@
 </template>
 
 <script>
-  export default {
-    data(){
+import Tabs from "@/components/Cadastro/Cadastro_produto/Tabs"
 
-    }
+  export default {
+    name:'Tributacao',
+    components:{
+      Tabs,
+    },
+    data(){
     return{
       ncm:null,
       cest:null,
       origem:null,
       cst:null,
     }
-    mounted() {
-      console.log('New component mounted.')
-    }
+  }
+
   }
 </script>
 
